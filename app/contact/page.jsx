@@ -16,9 +16,9 @@ export default function ContactPage() {
       </p>
       <h2>Advertising inquiries</h2>
       <p>
-        For now, use this placeholder email until a branded inbox is connected:
+        For advertising, sponsorship, restaurant updates, or corrections, email:
         <br />
-        <a href="mailto:hello@dallasfoodmap.com">hello@dallasfoodmap.com</a>
+        <a href="mailto:degarmodylan2@gmail.com">degarmodylan2@gmail.com</a>
       </p>
       <h2>Restaurant updates</h2>
       <p>

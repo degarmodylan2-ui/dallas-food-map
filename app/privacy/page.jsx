@@ -33,7 +33,7 @@ export default function PrivacyPage() {
       <h2>Contact</h2>
       <p>
         For privacy questions or corrections, contact
-        <a href="mailto:hello@dallasfoodmap.com"> hello@dallasfoodmap.com</a>.
+        <a href="mailto:degarmodylan2@gmail.com"> degarmodylan2@gmail.com</a>.
       </p>
     </InfoPage>
   );
