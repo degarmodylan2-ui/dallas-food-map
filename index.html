@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A curated map of top Dallas food spots with filters for cheap eats, mid-range favorites, and special occasion restaurants."
+    />
+    <title>Dallas Food Map</title>
+    <link rel="preconnect" href="https://unpkg.com" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIINfQDPABNOGECdNnB03pwLAo5N0E1F5QA="
+      crossorigin=""
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Dallas Food Map home">
+        <span class="brand-mark">DF</span>
+        <span>
+          <strong>Dallas Food Map</strong>
+          <small>Curated spots across DFW</small>
+        </span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="#map">Map</a>
+        <a href="#spots">Spots</a>
+        <a href="#advertise">Advertise</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="page-title">
+        <div class="hero-copy">
+          <p class="eyebrow">Dallas dining directory</p>
+          <h1 id="page-title">Find the city's best bites by price, neighborhood, and craving.</h1>
+          <p>
+            A map-first guide for locals and visitors looking for everything from cheap tacos to
+            polished date-night restaurants.
+          </p>
+        </div>
+        <aside class="ad-slot hero-ad" aria-label="Advertisement">
+          <span>Ad space</span>
+          <strong>728 x 90</strong>
+        </aside>
+      </section>
+
+      <section class="toolbar" aria-label="Food spot filters">
+        <label class="search">
+          <span>Search</span>
+          <input id="searchInput" type="search" placeholder="Name, cuisine, neighborhood" />
+        </label>
+
+        <div class="filter-group" role="group" aria-label="Price filters">
+          <button class="filter-button is-active" type="button" data-price="all">All</button>
+          <button class="filter-button" type="button" data-price="cheap">$</button>
+          <button class="filter-button" type="button" data-price="medium">$$</button>
+          <button class="filter-button" type="button" data-price="expensive">$$$</button>
+        </div>
+
+        <label class="select">
+          <span>Cuisine</span>
+          <select id="cuisineSelect">
+            <option value="all">All cuisines</option>
+          </select>
+        </label>
+
+        <button class="reset-button" id="resetButton" type="button">Reset</button>
+      </section>
+
+      <section class="layout" id="map">
+        <div class="map-panel">
+          <div id="foodMap" aria-label="Map of Dallas food spots"></div>
+        </div>
+
+        <aside class="directory-panel" id="spots">
+          <div class="panel-header">
+            <div>
+              <p class="eyebrow">Directory</p>
+              <h2>Top Dallas Food Spots</h2>
+            </div>
+            <span id="resultCount">0 spots</span>
+          </div>
+
+          <div class="ad-slot side-ad" aria-label="Advertisement">
+            <span>Sponsored</span>
+            <strong>Local restaurant or brand</strong>
+          </div>
+
+          <div class="spot-list" id="spotList"></div>
+        </aside>
+      </section>
+
+      <section class="revenue-band" id="advertise">
+        <div>
+          <p class="eyebrow">Revenue-ready</p>
+          <h2>Built for ads, sponsors, and featured listings.</h2>
+          <p>
+            The page includes ad zones that can later connect to Google AdSense, direct sponsors,
+            or promoted restaurant placements.
+          </p>
+        </div>
+        <a class="cta" href="mailto:hello@dallasfoodmap.com">Advertise with us</a>
+      </section>
+    </main>
+
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    <script src="app.js"></script>
+  </body>
+</html>
